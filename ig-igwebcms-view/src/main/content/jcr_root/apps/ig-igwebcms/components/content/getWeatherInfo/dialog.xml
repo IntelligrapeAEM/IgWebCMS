@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="dialog"
+          xtype="dialog">
+    <items
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                    jcr:primaryType="cq:Panel"
+                    title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <Country
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Country"
+                            itemId="country"
+                            name="./country"
+                            options="/etc/igwebcms/WeatherInfo.weatherdata.json"
+                            type="select"
+                            xtype="selection">
+                        <listeners
+                                jcr:primaryType="nt:unstructured"
+                                loadcontent="function(field,rec,path){&#xa;populateCustomSelection(field,rec,path,field.getValue()+'.weatherdata.json','state');}"
+                                selectionchanged="function(field,rec,path){&#xa;populateCustomSelection(field,rec,path,field.getValue()+'.weatherdata.json','state');}"/>
+                    </Country>
+                    <State
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="State"
+                            itemId="state"
+                            name="./state"
+                            type="select"
+                            xtype="selection">
+                        <listeners
+                                jcr:primaryType="nt:unstructured"
+                                loadcontent="function(field,rec,path){&#xa;populateCustomSelection(field,rec,path,field.getValue()+'.weatherdata.json?result=city','city');}&#xa;"
+                                selectionchanged="function(field,rec,path){&#xa;populateCustomSelection(field,rec,path,field.getValue()+'.weatherdata.json?result=city','city');}"/>
+                    </State>
+                    <City
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="City"
+                            itemId="city"
+                            name="./city"
+                            type="select"
+                            xtype="selection"/>
+                    <temp
+                            jcr:primaryType="cq:Widget"
+                            itemId="temp"
+                            name="./temp"
+                            xtype="hidden"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

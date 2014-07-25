@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[site.map.lib]"
+    embed="[jquery,granite.utils,granite.jquery,cq.jquery,underscore,granite.shared,cq.shared,jquery.jcarousel,cq.foundation,cq.foundation-main,jquery-ui,cq.jquery.ui,personalization,personalization.core,personalization.core.kernel,personalization.clientcontext.kernel,personalization.stores.kernel,personalization.kernel,personalization.clientcontext,personalization.stores,cq.collab.comments,cq.collab.feedlink,cq.collab.ratings,cq.collab.toggle,cq.collab.forum]"/>

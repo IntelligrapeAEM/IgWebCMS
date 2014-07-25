@@ -1,0 +1,209 @@
+/* ==========================================================================
+    CSS Code for Modals
+   
+    Author: Max Quattromani
+    Version: 1.8.9.9 - Updated: 9/26/2013
+   ========================================================================== */
+
+/* ==========================================================================
+    Layout
+   ========================================================================== */
+
+/* ==========================================================================
+    Module
+   ========================================================================== */
+   
+#backgroundPopup { 
+	position: fixed;
+	display: none;
+	top: 0px;  
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #000;	
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: .5;
+	z-index: 9999; }
+
+#toPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+	left: 0;
+	right: 0;	
+    height: auto;
+    max-height: 650px;
+    width: 600px;
+    max-width: 90%;
+	margin: auto;
+	margin-top: -256px;
+    overflow: visible;
+    border-radius: 3px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #333;
+    z-index: 99999; }
+
+	#toPopup > #popup_content { 
+		box-shadow: 0 0 5px 2px #555;
+		padding: 1em; }
+
+div.close {
+	position: absolute;
+	float: right;
+	top: -15px;
+    right: -15px;
+	height: 42px;
+	width: 42px;
+    background: url(../../images/modal_close.png) no-repeat;
+    cursor: pointer; }
+
+.modal-header { 
+    padding: 1em;
+    border-radius: 3px 3px 0 0;
+    background: #f0f2f5; }
+
+.modal-body { 
+    overflow: auto;
+    padding: 1em; }
+
+.modal-footer { 
+    overflow: auto;
+    padding: 1em;
+    border-radius: 0 0 3px 3px;
+    background: #f0f2f5; }
+
+.modal-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 650px;
+    /*width: 600px;*/
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: visible;
+    border-radius: 3px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #333;
+    z-index: 99999; }
+
+.modal-box > .modal_content {
+    max-height: 650px;
+    box-shadow: 0 0 5px 2px #555;
+    padding: 1em;
+    overflow: auto;
+    max-width: 100%;
+}
+
+#backgroundPopup, .modal .background {
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity: .5;
+    z-index: 9999; }
+
+.modal-box iframe {
+    max-width: 100%;
+}
+
+.modal-box .iframe {
+    height: 100%;
+    width: 100%;
+}
+
+    
+/* ==========================================================================
+    State
+   ========================================================================== */
+
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+   
+/* ==========================
+    Browser Specific
+   ========================== */
+
+/* Firefox */
+
+@-moz-document url-prefix() {
+
+}
+
+/* Webkit: Chrome/Safari */ 
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+}
+
+/* IE:8/9 */
+   
+/* ie (.ie) */   
+
+/* ie8 (.ie8) */
+
+/* ie9 (.ie9) */
+
+
+/* ==========================
+    Responsive Design
+   ========================== */ 
+
+/* ==========================
+    Tablet
+   ========================== */ 
+
+@media (max-width: 68.6875em) {
+ 
+/* ==========================================================================
+    Layout
+   ========================================================================== */
+
+/* ==========================================================================
+    Module
+   ========================================================================== */
+ 
+/* ==========================================================================
+    State
+   ========================================================================== */
+
+/* ==========================================================================
+    Theme
+   ========================================================================== */
+
+} 
+   
+/* ==========================
+    Smartphone
+   ========================== */ 
+
+@media (max-width: 31.25em) {
+
+/* ==========================================================================
+    Layout
+   ========================================================================== */
+
+/* ==========================================================================
+    Module
+   ========================================================================== */    
+
+/* ==========================================================================
+    State
+   ========================================================================== */
+
+/* ==========================================================================
+    Theme
+   ========================================================================== */ 
+    
+} 
+   

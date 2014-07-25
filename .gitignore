@@ -1,0 +1,60 @@
+#gtignore for Grails 1.2 and 1.3
+
+# web application files
+#/web-app/WEB-INF
+
+# IDE support files
+/.classpath
+/.launch
+/.project
+/.settings
+/*.launch
+/*.tmproj
+/ivy*
+/eclipse
+
+# default HSQL database files for production mode
+/prodDb.*
+
+# general HSQL database files
+*Db.properties
+*Db.script
+
+# logs
+/stacktrace.log
+/logs
+
+# project release file
+/*.war
+
+# plugin release file
+/*.zip
+
+# older plugin install locations
+/plugins
+/web-app/plugins
+/web-app/WEB-INF/classes
+
+# "temporary" build files
+*/target
+target/*
+out/*
+*.iml
+.gradle/*
+*.ipr
+*.iws
+build/*
+ig-webcms-core/build/*
+ig-webcms-ui/build/*
+
+.idea/
+
+mvn.log
+
+*LocaleWisePublish.java
+*DateWiseArticles.java
+*UtilityFunctions.java
+*test
+*test1
+
+

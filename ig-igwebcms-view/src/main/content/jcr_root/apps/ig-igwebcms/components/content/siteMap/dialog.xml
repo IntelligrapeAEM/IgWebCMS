@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="sitemap"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="sitemap">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <prop1
+                        jcr:primaryType="nt:unstructured"
+                        blankText="/content/geometrixx/en"
+                        emptyText="Ex.  /content/geometrixx/en"
+                        fieldDescription="Enter the Url whose childs behaves as Site Map Urls"
+                        fieldLabel="Home Page Url"
+                        inputType="text"
+                        msgTarget="under"
+                        name="./parentUrl"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <prop2
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="false"
+                        blankText="2"
+                        disabled="false"
+                        emptyText="Ex. 2"
+                        fieldDescription="It defines the submenu label for Site Map"
+                        fieldLabel="Submenu Label "
+                        grow="false"
+                        hideLabel="false"
+                        inputType="text"
+                        minLength="1"
+                        minLengthText="1"
+                        name="./subMenuLabel"
+                        readOnly="false"
+                        selectOnFocus="false"
+                        validateOnBlur="true"
+                        xtype="numberfield"/>
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldDescription="Where to display  pages?"
+                        fieldLabel="Display In"
+                        name="./displayIn"
+                        type="select"
+                        value="H"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <sameWindow
+                                jcr:primaryType="cq:Widget"
+                                text="Same Window"
+                                value="S"/>
+                            <newWindow
+                                jcr:primaryType="cq:Widget"
+                                text="New Window"
+                                value="N"/>
+                        </options>
+                    </type>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

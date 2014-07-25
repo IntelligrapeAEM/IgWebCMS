@@ -1,0 +1,4 @@
+#base=js
+jquery.cookie.js
+jquery.simpleWeather.js
+jquery.simpleWeather.min.js

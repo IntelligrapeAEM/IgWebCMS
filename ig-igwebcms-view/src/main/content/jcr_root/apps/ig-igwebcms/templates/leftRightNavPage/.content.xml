@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:description="A responsive web design example using Twitter Bootstrap."
+    jcr:mixinTypes="[mix:lockable]"
+    jcr:primaryType="cq:Template"
+    jcr:title="IG Content Page with Left &amp; Right Navigation Component"
+    allowedPaths="[/content(/.*)?,/content]"
+    ranking="{Long}40">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="ig-igwebcms/components/page/leftRightNavPage"/>
+</jcr:root>

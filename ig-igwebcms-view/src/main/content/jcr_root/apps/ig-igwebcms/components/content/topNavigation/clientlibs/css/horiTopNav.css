@@ -1,0 +1,176 @@
+ul#tabmenu
+{
+    width:100%;
+    margin: 0 auto; /*If the menu has a width, this "margin:0 auto;" makes the menu center-aligned. You can remove it for left-alignment, or change it to "margin-left:auto; margin-right:0;" for right-alignment.*/
+    text-align:left;
+    list-style:none;
+    padding:0;
+    font-size:0;
+    position:relative;
+    min-height:62px;
+}
+ul#tabmenu:after
+{
+    content:'.'; height: 0; clear: both; display: block; visibility: hidden;
+}
+
+ul#tabmenu li
+{
+    display:inline;
+    list-style:none; padding:0;
+    margin-top:0;margin-bottom:0;
+    margin-left:0;margin-right:-1px;
+
+}
+
+/*Main menu links*/
+ul#tabmenu li a
+{
+    letter-spacing:normal;
+    color:#666666;
+    padding:0px 20px 0 20px;
+    line-height:35px;
+    font-size:14px;
+    font-weight:normal;
+    font-family:Verdana,Arial;
+    text-decoration:none;
+    display:inline-block;
+    outline:0;
+
+    border:1px solid #CAD0DB;
+    border-bottom:none;
+    background:#F7F7F7;
+    position:relative;
+    top:1px;
+    z-index:4;
+    border-radius:4px 4px 0 0;
+
+}
+/* If you've set the menu's javascript file with { preview:false }, you may want to specify the following hovered tab styles
+ul#tabmenu li a:hover {
+    color: red;
+    background: black;
+}*/
+
+ul#tabmenu li.active a
+{
+    padding-bottom:1px;
+    background: #E9ECF0;
+    color:#000000;
+}
+
+/* You can set active tab's style when hovered
+ul#tabmenu li.active a:hover {
+    color:green;
+}*/
+
+/* Secondary level sub-menu
+----------------------------------------------------------*/
+ul#tabmenu li.active ul, ul#tabmenu>li:first-child>ul
+{
+    display:block;
+    text-align:left;
+    margin:0;
+    padding:0;
+    border:1px solid #CAD0DB;
+    float:left;
+    width:100%;
+    z-index:3;
+    border-radius:0 3px 3px 3px;
+}
+
+ul#tabmenu li ul
+{
+    display: none;
+    letter-spacing:normal;
+    background:#E9ECF0;
+}
+ul#tabmenu li li
+{
+    margin-left: 0px;
+}
+
+/*Sub-menu links*/
+ul#tabmenu ul li a
+{
+    color:#000000;
+    padding:0;
+    padding-left:30px;padding-right:0;
+    font-size:14px;
+    font-weight:normal;
+    font-family:Verdana,Arial;
+    line-height:50px;
+    margin: 0; border: 0; top: 0;
+    background: transparent;
+}
+ul#tabmenu li.active li a, ul#tabmenu li.active li a:hover {
+    color:#000000;
+    border: 0;
+    background: transparent;
+}
+
+ul#tabmenu ul li.subActive a, ul#tabmenu ul li a:hover
+{
+    text-decoration: underline;
+    color:#0066CC;
+}
+
+ul#tabmenu li.dummy a
+{
+    display:none;
+}
+
+/*Third-level sub menu
+------------------------------------------------------------*/
+ul#tabmenu ul li li
+{
+    font-size:14px;
+}
+/* links */
+ul#tabmenu ul li li a
+{
+    line-height:30px;
+    padding: 0;
+    white-space: nowrap;
+    font-size:14px;
+    font-weight:normal;
+    font-family:Verdana,Arial;
+}
+/* non-active links */
+ul#tabmenu ul li.subActive li a
+{
+    color:#000000;
+    text-decoration: none;
+}
+/* active link */
+ul#tabmenu ul li.subActive li.subActive a, ul#tabmenu ul li.subActive li a:hover
+{
+    color:#0066CC;
+    text-decoration: underline;
+}
+
+ul#tabmenu li.active li li
+{
+    display: block;
+    *clear:both;/*IE hack*/
+}
+
+ul#tabmenu li.active ul ul
+{
+    text-align:left;
+    padding:4px 24px 10px 24px;
+    left: 0px; /*offset*/
+    width: auto;
+    background:#E9ECF0;
+    border:1px solid #CAD0DB;
+    border-top: 0;
+    /*top: 36px; */
+    display: none;
+    position: absolute;
+    z-index: 4;
+    border-radius: 0 0 4px 4px;
+}
+ul#tabmenu li.active li
+{
+    position: relative;
+}

@@ -1,0 +1,39 @@
+body{
+                font-family:verdana;
+                 font-size:14px;
+            }
+            #dataList{
+                border:0px solid red;
+                width:500px;
+                height:450px;
+                overflow:auto;
+                position:absolute;
+
+            }
+            #headerPart{
+                height:50px;
+            }
+            .textCss{
+                    background:transparent;
+                    border: 1px solid #999; 
+    				width: 150px; 
+
+            }
+
+            .editTextCss{
+                    background:transparent;
+                    border: 0px solid #999; 
+    				width: 150px; 
+
+            }
+            .buttonCss{
+    				width: 70px; 
+                    height:20px;
+            }
+
+            tr { 
+                background-color: white; 
+            }
+			tr:hover{
+                background-color: #ccc; 
+            }

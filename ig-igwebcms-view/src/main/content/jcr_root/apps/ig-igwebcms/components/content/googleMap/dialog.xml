@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <markerText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Marker Text"
+                        name="./markerText"
+                        xtype="textfield"/>
+                    <width
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Width Of Map(px)"
+                        name="./width"
+                        xtype="textfield"/>
+                    <height
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Height Of Map(px)"
+                        name="./height"
+                        xtype="textfield"/>
+                </items>
+            </tab1>
+            <mapoptions
+                jcr:primaryType="cq:Panel"
+                title="Map Options">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <panControl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Pan Control"
+                        name="./panControl"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <zoomControl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Zoom Control"
+                        name="./zoomControl"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <mapTypeControl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Map Type Control"
+                        name="./mapTypeControl"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <scaleControl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Scale Control"
+                        name="./scaleControl"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <streetViewControl
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Scale Street View Control"
+                        name="./streetView"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <resType
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./image/sling:resourceType"
+                        value="foundation/components/image"
+                        xtype="hidden"/>
+                </items>
+            </mapoptions>
+            <markerImage
+                jcr:primaryType="cq:Widget"
+                cropParameter="./image/imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./image/fileName"
+                fileReferenceParameter="./image/fileReference"
+                mapParameter="./image/imageMap"
+                name="./image/file"
+                requestSuffix="/image.img.png"
+                roatateParameter="./image/imageRotate"
+                title="Marker Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

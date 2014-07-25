@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Youtube Settings"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic
+                    jcr:primaryType="nt:unstructured"
+                    title="Basic"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <loginUrl
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Channel ID"
+                            name="./loginUrl"
+                            xtype="textfield"/>
+                        <loginspacer
+                            jcr:primaryType="cq:Widget"
+                            height="{Long}20"
+                            xtype="spacer"/>
+                        <customerkey
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Google Key"
+                            name="./customerkey"
+                            xtype="textfield"/>
+                        <spacer2
+                            jcr:primaryType="cq:Widget"
+                            height="{Long}20"
+                            xtype="spacer"/>
+                        <rootPath
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Target Path"
+                            name="./youtubepolling/target"
+                            root="/content/dam"
+                            xtype="pathfield"/>
+                        <spacer
+                            jcr:primaryType="cq:Widget"
+                            height="{Long}20"
+                            xtype="spacer"/>
+                        <btnpanel
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}false"
+                            xtype="panel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <connectbutton
+                                    jcr:primaryType="cq:Widget"
+                                    localName="connectButton"
+                                    style="float:right;"
+                                    text="Connect to Youtube"
+                                    xtype="button">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        click="function(comp, evt , record, path) {&#xa;    var str=document.URL;&#xa;  var rootLoc=window.location.origin;&#xa;  var test=str.replace(&quot;rootLoc&quot;,&quot;&quot;);&#xa;    var a=test.split(&quot;.&quot;);&#xa;    var path=a[0]+&quot;/jcr:content&quot;;&#xa;    var dialog = comp.findParentByType('dialog'); &#xa;    var feedurl = dialog.findById(&quot;Url&quot;);&#xa;&#x9;var source = dialog.findById(&quot;source&quot;);&#xa;&#x9;feedurl.setValue(path);&#xa;&#x9;source.setValue(&quot;uvideo:&quot;+path);&#xa;&#x9;CQ.salesforce.restAPI1.connect(dialog); &#xa;}&#xa;"/>
+                                </connectbutton>
+                            </items>
+                        </btnpanel>
+                        <feedUrl
+                            jcr:primaryType="nt:unstructured"
+                            id="Url"
+                            ignoreData="true"
+                            name="./youtubepolling/feedUrl"
+                            value=""
+                            xtype="hidden"/>
+                        <feedType
+                            jcr:primaryType="nt:unstructured"
+                            ignoreData="true"
+                            itemId="ftype"
+                            name="./youtubepolling/feedType"
+                            value="uvideo"
+                            xtype="hidden"/>
+                        <source
+                            jcr:primaryType="nt:unstructured"
+                            id="source"
+                            ignoreData="true"
+                            name="./youtubepolling/source"
+                            value=""
+                            xtype="hidden"/>
+                        <mixinTypes
+                            jcr:primaryType="nt:unstructured"
+                            ignoreData="true"
+                            name="./youtubepolling/jcr:mixinTypes"
+                            value="cq:PollConfig"
+                            xtype="hidden"/>
+                    </items>
+                </basic>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

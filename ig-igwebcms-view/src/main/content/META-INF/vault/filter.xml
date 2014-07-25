@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspaceFilter version="1.0">
+    <filter root="/apps/ig-igwebcms">
+        <exclude pattern="/apps/ig-igwebcms/install.*"/>
+        <exclude pattern="/apps/ig-igwebcms/runmodes.*"/>
+    </filter>
+    <filter root="/etc/clientlibs/ig-igwebcms">
+            </filter>
+	<filter root="/etc/designs/ig-igwebcms">
+        <exclude pattern="/etc/designs/ig-igwebcms/jcr:content.*"/>
+    </filter>
+    <filter root="/apps/wcm" />
+    <filter root="/apps/youtube" />
+    <filter root="/apps/foundation" />
+</workspaceFilter>

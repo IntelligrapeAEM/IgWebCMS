@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ig.igwebcms</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>ig-igwebcms-services</artifactId>
+    <packaging>bundle</packaging>
+
+    <name>${project.groupId} - ${project.artifactId}</name>
+
+    <description>
+        An OSGi Bundle containing all of the backend CQ service implementations for the 'Ig Web CMS' project.
+
+        During development, this bundle can be automatically deployed to your CQ instance by activating the
+        "auto-deploy" profile and running the Maven "install" lifecycle phase (e.g. "mvn -Pauto-deploy install"). This
+        can also be done from within most IDEs like Eclipse.
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.squeakysand.osgi</groupId>
+            <artifactId>squeakysand-osgi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.6.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-api</artifactId>
+            <version>5.6.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-taglib</artifactId>
+            <version>5.6.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.api</artifactId>
+            <version>2.4.3-R1488084</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-commons</artifactId>
+            <version>5.6.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.engine</artifactId>
+            <version>2.2.8</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.jcr.jcr-wrapper</artifactId>
+            <version>2.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cqse</groupId>
+            <artifactId>cqse-httpservice</artifactId>
+            <version>4.1.52</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.scripting.jsp</artifactId>
+            <version>2.0.28</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.day.commons.osgi.wrapper</groupId>
+            <artifactId>com.day.commons.osgi.wrapper.commons-lang2</artifactId>
+            <version>2.5-0001</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.jcr.resource</artifactId>
+            <version>2.2.9-R1483758</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.commons.osgi.wrapper</groupId>
+            <artifactId>com.day.commons.osgi.wrapper.commons-httpclient</artifactId>
+        </dependency>
+        <!-- <dependency>
+             <groupId>org.spockframework</groupId>
+             <artifactId>spock-maven</artifactId>
+             <version>0.7-groovy-2.0</version>
+         </dependency>-->
+        <!--<dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.commons.testing</artifactId>
+            <version>2.0.16</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.commons.json</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.ui.commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq.workflow</groupId>
+            <artifactId>cq-workflow-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-search</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.granite</groupId>
+            <artifactId>com.adobe.granite.replication.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.commons.osgi.wrapper</groupId>
+            <artifactId>com.day.commons.osgi.wrapper.commons-httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.commons.scheduler</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.jcr.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.jackrabbit</groupId>
+            <artifactId>jackrabbit-jcr-commons</artifactId>
+        </dependency>
+        <!-- Added by Vivek -->
+        <dependency>
+            <groupId>com.day.cq.dam</groupId>
+            <artifactId>cq-dam-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq.dam</groupId>
+            <artifactId>cq-dam-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-tagging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq.wcm</groupId>
+            <artifactId>cq-wcm-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-polling-importer</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <!--<Bundle-Activator>com.ig.igwebcms.osgi.Activator</Bundle-Activator>
+                        <Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>-->
+                        <Export-Package>
+                            com.ig.igwebcms.core.util.*;version=1.0.0 ,
+                            com.ig.igwebcms.core.constants.*=1.0.0 ,
+                            com.ig.igwebcms.core.logging.*;version=1.0.0,
+                            com.ig.igwebcms.core.model.*;version=1.0.0 ,
+                            com.ig.igwebcms.taglib.*;version=1.0.0 ,
+                            com.ig.igwebcms.groovy.taglib.*;version=1.0.0,
+                            com.ig.igwebcms.servlets.*;version=1.0.0,
+                            com.ig.igwebcms.services.*;version=1.0.0,
+                            com.ig.igwebcms.model.*;version=1.0.0,
+                            com.ig.igwebcms.components.*;version=1.0.0,
+                            com.ig.igwebcms.workflow.*
+                        </Export-Package>
+                        <Include-Resource>
+                            META-INF/igwebcms.tld=${project.build.outputDirectory}/META-INF/igwebcms.tld,
+                            {maven-resources} ,
+                            custom/igwebcms.cnd=${project.build.outputDirectory}/custom/igwebcms.cnd,
+                            {maven-resources}
+                        </Include-Resource>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-scr-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>auto-deploy</id>
+            <build>
+                <plugins>
+                    <!--
+                        Use the sling plugin to automatically deploy the bundle to the JCR tree
+                    -->
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                                <configuration>
+                                    <slingUrl>http://${cq.host}:${cq.port}</slingUrl>
+                                    <!-- 
+                                        IMPORTANT: due to an issue with the 2.1.0 version of the maven-sling-plugin, the path specified by the slingUrlSuffix
+                                        parameter below will not be created automatically and so must already exist in your CQ instance BEFORE trying to use the
+                                        auto-deploy profile. See this link for further information:
+                                        http://mail-archives.apache.org/mod_mbox/sling-users/201204.mbox/%3CBD6ED82C-3223-41C2-BF15-C987D7AAFCE3@craigsdickson.com%3E
+                                    -->
+                                    <slingUrlSuffix>/apps/ig-igwebcms/install</slingUrlSuffix>
+                                    <user>${cq.user}</user>
+                                    <password>${cq.password}</password>
+                                    <usePut>true</usePut>
+                                    <failOnError>true</failOnError>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

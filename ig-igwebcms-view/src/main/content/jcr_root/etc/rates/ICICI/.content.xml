@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-03-11T15:15:28.384+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/ig-igwebcms/templates/PageLayoutTemplate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="ICICI"
+        jcr:uuid="42baf520-42e2-458c-ae77-0a48ab0c1d06"
+        sling:resourceType="ig-igwebcms/components/page/extWidget">
+        <Home_x0020_Loan
+            jcr:primaryType="nt:unstructured"
+            key="Home Loan"
+            location="/etc/rates/ICICI/jcr:content/Home Loan"
+            modified="Y"
+            value="12.5"/>
+        <Personal_x0020_Loan
+            jcr:primaryType="nt:unstructured"
+            key="Personal Loan"
+            location="/etc/rates/ICICI/jcr:content/Personal Loan"
+            modified="Y"
+            operation="EDIT"
+            value="12.5-13.5"/>
+    </jcr:content>
+    <X1/>
+</jcr:root>

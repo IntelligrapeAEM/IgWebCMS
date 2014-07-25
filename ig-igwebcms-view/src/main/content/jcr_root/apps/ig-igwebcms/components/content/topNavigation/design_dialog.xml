@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="topNavParams"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                border="false"
+                height=""
+                title="Menus Details"
+                width="500">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <prop1
+                        jcr:primaryType="nt:unstructured"
+                        blankText="/content/geometrixx/en"
+                        emptyText="Ex.  /content/geometrixx/en"
+                        fieldDescription="Enter the Url whose childs behaves as a Top Nav. Menus"
+                        fieldLabel="Top Nav. Menu Path"
+                        inputType="text"
+                        msgTarget="under"
+                        name="./parentUrl"
+                        validateOnBlur="true"
+                        xtype="textfield"/>
+                    <prop2
+                        jcr:primaryType="nt:unstructured"
+                        blankText="2"
+                        emptyText="Ex. 2"
+                        fieldDescription="It defines the submenu label of  the Top Nav. Menus"
+                        fieldLabel="Submenu Label "
+                        inputType="text"
+                        maxLength="1"
+                        maxLengthText="1"
+                        minLength="1"
+                        minLengthText="1"
+                        name="./subMenuLabel"
+                        validateOnBlur="true"
+                        xtype="numberfield"/>
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="How to display  menus?"
+                        fieldLabel="Display Type"
+                        name="./displayType"
+                        type="select"
+                        value="H"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <hierarchy
+                                jcr:primaryType="cq:Widget"
+                                text="Hierarchy"
+                                value="H"/>
+                            <tab
+                                jcr:primaryType="cq:Widget"
+                                text="Tab"
+                                value="T"/>
+                        </options>
+                    </type>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

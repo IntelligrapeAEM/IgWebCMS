@@ -1,0 +1,9 @@
+<igwebTestNodeType='http://www.intelligrape.com/nodeWebTestNode'>
+[igwebTestNodeType:testNodeType]>sling:Folder orderable
+-igwebTestNodeType:Name (string)
+ = 'Geetika'
+primary mandatory autocreated 
+-igwebTestNodeType:City (string)
+= 'Delhi'
+primary mandatory autocreated
+

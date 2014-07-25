@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ig.igwebcms</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>${project.groupId} - ${project.artifactId}</name>
+
+    <description>
+        Parent Maven POM for the 'Ig Web CMS' project.
+    </description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!--
+            the following CQ connection properties are the default out-of-the-box CQ settings and are used by all modules in this project.
+            you should override them in your local settings.xml file if your CQ environment is different.
+        -->
+        <cq.host>localhost</cq.host>
+        <cq.port>4502</cq.port>
+        <cq.user>admin</cq.user>
+        <cq.password>admin</cq.password>
+    </properties>
+
+    <scm>
+        <connection><!-- TODO --></connection>
+        <developerConnection><!-- TODO --></developerConnection>
+        <url><!-- TODO --></url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>mavenRepos</id>
+            <name>mav-central-repo</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+
+    </distributionManagement>
+
+    <modules>
+        <module>ig-igwebcms-content</module>
+        <module>ig-igwebcms-view</module>
+        <module>ig-igwebcms-services</module>
+        <module>ig-igwebcms-all</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.cqblueprints</groupId>
+                <artifactId>cqdependencies</artifactId>
+                <version>5.6.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.squeakysand.jcr</groupId>
+                <artifactId>squeakysand-jcr-taglib</artifactId>
+                <version>0.3.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.squeakysand.jsp</groupId>
+                <artifactId>squeakysand-jsp</artifactId>
+                <version>0.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squeakysand.osgi</groupId>
+                <artifactId>squeakysand-osgi</artifactId>
+                <version>0.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squeakysand.sling</groupId>
+                <artifactId>squeakysand-sling-taglib</artifactId>
+                <version>0.3.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.5</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- Groovy dependency -->
+
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>2.1.6</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Groovy dependency -->
+
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr</artifactId>
+                <version>1.6.3-R1409029</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.commons.osgi.wrapper</groupId>
+                <artifactId>com.day.commons.osgi.wrapper.commons-httpclient</artifactId>
+                <version>3.1.0.018</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq.workflow</groupId>
+                <artifactId>cq-workflow-api</artifactId>
+                <version>5.6.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq</groupId>
+                <artifactId>cq-search</artifactId>
+                <version>5.6.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.granite</groupId>
+                <artifactId>com.adobe.granite.ui.commons</artifactId>
+                <version>5.5.76</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.granite</groupId>
+                <artifactId>com.adobe.granite.replication.core</artifactId>
+                <version>5.12.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--<dependency>
+                <groupId>com.day.commons.osgi.wrapper</groupId>
+                <artifactId>com.day.commons.osgi.wrapper.commons-httpclient</artifactId>
+                <version>3.1.0.018</version>
+            </dependency>-->
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.commons.scheduler</artifactId>
+                <version>2.3.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.jcr.api</artifactId>
+                <version>2.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>jackrabbit-jcr-commons</artifactId>
+                <version>2.6.2</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--   Added by Vivek     -->
+            <dependency>
+                <groupId>com.day.cq.dam</groupId>
+                <artifactId>cq-dam-api</artifactId>
+                <version>5.6.6</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq.dam</groupId>
+                <artifactId>cq-dam-commons</artifactId>
+                <version>5.6.8</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq</groupId>
+                <artifactId>cq-tagging</artifactId>
+                <version>5.6.4</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>3.2.1</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq.wcm</groupId>
+                <artifactId>cq-wcm-core</artifactId>
+                <version>5.6.14</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.day.cq</groupId>
+                <artifactId>cq-polling-importer</artifactId>
+                <version>5.4.0</version>
+                <scope>provided</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.day.jcr.vault</groupId>
+                    <artifactId>maven-vault-plugin</artifactId>
+                    <version>0.0.10</version>
+                    <configuration>
+                        <verbose>true</verbose>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>com.squeakysand.jsp</groupId>
+                    <artifactId>jsptld-maven-plugin</artifactId>
+                    <version>0.4.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.sourceforge.maven-taglib</groupId>
+                    <artifactId>maven-taglib-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>2.3.7</version>
+                    <configuration>
+                        <instructions>
+                            <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+                            <Embed-Directory>OSGI-INF/lib</Embed-Directory>
+                            <Embed-Transitive>true</Embed-Transitive>
+                        </instructions>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-scr-plugin</artifactId>
+                    <version>1.7.4</version>
+                    <executions>
+                        <execution>
+                            <id>generate-scr-descriptor</id>
+                            <goals>
+                                <goal>scr</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>2.4.1</version>
+                </plugin>
+                <!--<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.3.2</version>
+                    <configuration>
+                        <showDeprecation>true</showDeprecation>
+                        <showWarnings>true</showWarnings>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.5</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.12</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.sling</groupId>
+                    <artifactId>maven-sling-plugin</artifactId>
+                    <version>2.1.0</version>
+                </plugin>
+
+                <!-- Groovy Plugin  -->
+                <plugin>
+                    <groupId>org.codehaus.groovy</groupId>
+                    <artifactId>groovy-eclipse-compiler</artifactId>
+                    <version>2.8.0-01</version>
+                    <extensions>true</extensions>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-eclipse-batch</artifactId>
+                            <version>2.1.8-01</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <compilerId>groovy-eclipse-compiler</compilerId>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                        <encoding>utf-8</encoding>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-eclipse-compiler</artifactId>
+                            <version>2.8.0-01</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-eclipse-batch</artifactId>
+                            <version>2.1.8-01</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <!-- Groovy Plugin  -->
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>eclipse</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <!-- 
+                            this plugin holds configuration information for Maven plugins that the Eclipse m2e plugin does not know how to handle.
+                            it does not affect the actual Maven build process.
+                            you should activate the "eclipse" profile for this project and its sub-modules if you are working in Eclipse as it will remove
+                            some of the error messages you see.
+                         -->
+                        <plugin>
+                            <groupId>org.eclipse.m2e</groupId>
+                            <artifactId>lifecycle-mapping</artifactId>
+                            <version>1.0.0</version>
+                            <configuration>
+                                <lifecycleMappingMetadata>
+                                    <pluginExecutions>
+                                        <pluginExecution>
+                                            <pluginExecutionFilter>
+                                                <groupId>com.squeakysand.jsp</groupId>
+                                                <artifactId>jsptld-maven-plugin</artifactId>
+                                                <versionRange>[0.3.0,)</versionRange>
+                                                <goals>
+                                                    <goal>generate</goal>
+                                                </goals>
+                                            </pluginExecutionFilter>
+                                            <action>
+                                                <execute>
+                                                    <runOnIncremental>true</runOnIncremental>
+                                                </execute>
+                                            </action>
+                                        </pluginExecution>
+                                        <pluginExecution>
+                                            <pluginExecutionFilter>
+                                                <groupId>org.apache.felix</groupId>
+                                                <artifactId>maven-scr-plugin</artifactId>
+                                                <versionRange>[1.7.4,)</versionRange>
+                                                <goals>
+                                                    <goal>scr</goal>
+                                                </goals>
+                                            </pluginExecutionFilter>
+                                            <action>
+                                                <execute>
+                                                    <runOnIncremental>false</runOnIncremental>
+                                                </execute>
+                                            </action>
+                                        </pluginExecution>
+                                    </pluginExecutions>
+                                </lifecycleMappingMetadata>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

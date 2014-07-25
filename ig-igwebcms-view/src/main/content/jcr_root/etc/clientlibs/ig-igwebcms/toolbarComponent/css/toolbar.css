@@ -1,0 +1,25 @@
+.navbar-right div ul{
+    list-style: none;
+}
+
+.navbar-right div li{
+    display: inline;
+}
+
+.footer ul{
+    list-style: none;
+}
+.footer li:nth-child(1){
+    color:black;
+    font-weight:bold;
+
+}
+.footer li:nth-child(1) a{
+    color:black;
+    font-weight:bold;
+
+}
+.saperator{
+    background:url("/etc/designs/ig-igwebcms/images/top_sep.gif") no-repeat scroll 0 center rgba(0, 0, 0, 0);
+    padding-left:10px;
+}

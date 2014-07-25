@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="420"
+    title="Edit Call To Action"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <Main
+                jcr:primaryType="cq:Panel"
+                title="Main">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link To:"
+                        name="./url"
+                        xtype="pathfield"/>
+                    <textOverlay
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Optional override of link label"
+                        fieldLabel="Text Overlay:"
+                        name="./textOverlay"
+                        xtype="textfield"/>
+                    <analyticsNiceName
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldDescription="This is the name of the link for reporting in Omniture.  Please follow the pattern of:&lt;br/>&lt;strong>&#xa;        component name:position:sub-position:descriptive name&lt;/strong>&lt;br/>&#xa;        For example:&lt;br/>&#xa;        offer snapshot:2:1:tv view offers&lt;br/>&#xa;        Full naming guidelines are available &lt;a href=&quot;http://mystropedia.corp.mystrotv.com/display/WEBCMS/AnalyticsName+naming+conventions&quot; target=&quot;_blank&quot;>here&lt;/a>"
+                        fieldLabel="Analytics Nice Name"
+                        name="./analyticsNiceName"
+                        width="300"
+                        xtype="textfield"/>
+                </items>
+            </Main>
+            <Styling
+                jcr:primaryType="cq:Panel"
+                title="Styling">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <ctaType
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the style of the Call to Action Button"
+                        fieldLabel="CTA Type"
+                        name="./ctaType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <_x0030_1-blueButton
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue Button"
+                                value="blue-button"/>
+                            <_x0030_2-blackButton
+                                jcr:primaryType="nt:unstructured"
+                                text="Black Button"
+                                value="black-button"/>
+                            <_x0030_3-clearButton
+                                jcr:primaryType="nt:unstructured"
+                                text="Clear Button"
+                                value="clear-button"/>
+                            <_x0030_4-blueArrow
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue Arrow"
+                                value="blue-arrow"/>
+                            <_x0030_5-doubleBlueArrow
+                                jcr:primaryType="nt:unstructured"
+                                text="Doube Blue Arrow"
+                                value="double-arrow"/>
+                            <_x0030_6-residentialBlackButton
+                                jcr:primaryType="nt:unstructured"
+                                text="Residential Black Button"
+                                value="btn black full"/>
+                        </options>
+                    </ctaType>
+                    <ctaAlignment
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select the alignment of the Call to Action Button"
+                        fieldLabel="OPTIONAL: CTA Alignment"
+                        name="./ctaAlignment"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <_x0031_-left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <_x0032_-right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+                            <_x0033_-center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="center"/>
+                        </options>
+                    </ctaAlignment>
+                    <allowEmpty
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Allow empty text overlay"
+                        fieldLabel="Allow Empty Text Overlay"
+                        inputValue="true"
+                        name="./allowEmpty"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <removeArrow
+                        jcr:primaryType="cq:Widget"
+                        checked="{Boolean}true"
+                        fieldDescription="Remove arrow on button (on applicable for &quot;arrow&quot; CTA types)"
+                        fieldLabel="Remove Arrow On Button"
+                        inputValue="true"
+                        name="./removeArrow"
+                        type="checkbox"
+                        xtype="selection"/>
+                </items>
+            </Styling>
+            <Advanced
+                jcr:primaryType="cq:Panel"
+                title="Advanced">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <fragment
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Optional: Link to create a bookmark to an anchor inside of the page, indicated by the URL. Enter the anchor name here."
+                        fieldLabel="URL Fragment"
+                        name="./fragment"
+                        xtype="textfield"/>
+                    <openNewWindow
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Open resulting page in a new browser window"
+                        fieldLabel="Open in New Window"
+                        inputValue="true"
+                        name="./newWindow"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <modalOverlay
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Open as modal overlay"
+                        name="./modalOverlay"
+                        type="checkbox"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            check=""
+                            loadcontent="function(field,rec,path){&#xa;  var typeDropDown = field.findParentByType('panel').getComponent(3);&#xa;  var typeParams = field.findParentByType('panel').getComponent(4);&#xa;  if(!field.optionItems.itemAt(0).getValue()){&#xa;     typeDropDown.hide();&#xa;     typeParams.hide();&#xa;  } else {&#xa;     typeDropDown.setWidth(200);&#xa;     typeDropDown.show();&#xa;     typeParams.show();&#xa;  }&#xa;}"
+                            selectionchanged="function(selection, value, checked){&#xa;  var typeDropDown = selection.findParentByType('panel').getComponent(3);&#xa;  var typeParams = selection.findParentByType('panel').getComponent(4);&#xa;  if(!checked){&#xa;     typeDropDown.hide();&#xa;     typeParams.hide();&#xa;  } else {&#xa;     typeDropDown.setWidth(200);&#xa;     typeDropDown.show();&#xa;     typeParams.show();&#xa;  }&#xa;}"/>
+                    </modalOverlay>
+                    <modalType
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Select Generic Modal"
+                        fieldLabel="Select Modal Type"
+                        name="./modalType"
+                        type="select"
+                        value="modal"
+                        width="{Long}200"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <modal
+                                jcr:primaryType="nt:unstructured"
+                                text="Checkout Modal"
+                                value="modal"/>
+                            <modalGeneric
+                                jcr:primaryType="nt:unstructured"
+                                text="Generic Modal"
+                                value="modalGeneric"/>
+                            <modalVideo
+                                jcr:primaryType="nt:unstructured"
+                                text="Video Modal"
+                                value="modalVideo"/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="Not Modal"
+                                value=""/>
+                            <modalSitetour
+                                jcr:primaryType="nt:unstructured"
+                                text="Site Tour Modal"
+                                value="modalSitetour"/>
+                        </options>
+                    </modalType>
+                    <passParams
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Pass along the reference page and analytics into the modal call"
+                        fieldLabel="Pass along parameters"
+                        name="./passParams"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <anchor_selector
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Optional: Link to create a bookmark to an anchor inside of a teased component. Enter the anchor name here."
+                        fieldLabel="Anchor Selector"
+                        name="./anchor-selector"
+                        xtype="textfield"/>
+                </items>
+            </Advanced>
+        </items>
+    </items>
+    <buttons jcr:primaryType="cq:WidgetCollection">
+        <ok
+            jcr:primaryType="cq:Widget"
+            handler="function(b, e){ &#xa;&#x9;var invalidComponents = b.findParentByType(&quot;dialog&quot;).findBy(&#xa;&#x9;&#x9;&#x9;&#x9;function(component,container){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;return (component.getXType() ==(&quot;textfield&quot;) &amp;&amp; !component.isValid());&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;);&#xa;&#x9;if( invalidComponents.length &lt;= 0 ) &#xa;&#x9;{&#xa;&#x9;&#x9;b.findParentByType(&quot;dialog&quot;).ok();&#xa;&#x9;&#x9;return;&#xa;&#x9;} else {&#xa;&#x9;&#x9;invalidComponents[0].findParentByType(&quot;panel&quot;).show();&#xa;&#x9;&#x9;b.findParentByType(&quot;dialog&quot;).ok();&#xa;&#x9;}&#xa;}"
+            text="OK"
+            type="submit"
+            xtype="button"/>
+        <cancel
+            jcr:primaryType="cq:Widget"
+            handler="function(b, e){b.findParentByType(&quot;dialog&quot;).hide();}"
+            text="Cancel"
+            xtype="button"/>
+    </buttons>
+</jcr:root>

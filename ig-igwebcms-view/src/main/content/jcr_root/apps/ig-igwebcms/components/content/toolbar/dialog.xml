@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <typeconfigs
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Options"
+                        name="./options"
+                        xtype="customconfigmultifield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <linktext
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Link Text"
+                                name="link_text"
+                                xtype="textfield"/>
+                            <url
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="URL"
+                                name="url"
+                                xtype="textfield"/>
+                            <target
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Target"
+                                name="target"
+                                type="combobox"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <blank
+                                        jcr:primaryType="nt:unstructured"
+                                        value="_blank"/>
+                                    <self
+                                        jcr:primaryType="nt:unstructured"
+                                        value="_self"/>
+                                    <parent
+                                        jcr:primaryType="nt:unstructured"
+                                        value="_parent"/>
+                                    <top
+                                        jcr:primaryType="nt:unstructured"
+                                        value="_top"/>
+                                </options>
+                            </target>
+                        </fieldConfigs>
+                    </typeconfigs>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

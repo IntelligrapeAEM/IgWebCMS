@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-03-11T15:04:02.577+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/ig-igwebcms/templates/PageLayoutTemplate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="X1"
+        jcr:uuid="1bd47b6d-0cfe-401c-aaec-21b5a53c1749"
+        sling:resourceType="ig-igwebcms/components/page/extWidget">
+        <a1
+            jcr:primaryType="nt:unstructured"
+            key="a1"
+            location="/etc/rates/ICICI/X1/jcr:content/a1"
+            modified="Y"
+            value="12"/>
+        <a2
+            jcr:primaryType="nt:unstructured"
+            key="a2"
+            location="/etc/rates/ICICI/X1/jcr:content/a2"
+            modified="Y"
+            operation="EDIT"
+            value="14"/>
+    </jcr:content>
+</jcr:root>

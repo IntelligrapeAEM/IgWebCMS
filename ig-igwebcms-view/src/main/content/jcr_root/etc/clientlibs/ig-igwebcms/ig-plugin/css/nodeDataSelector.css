@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+#CQ .x-html-editor-tb .x-edit-nodedata{
+    background: url(/libs/cq/ui/widgets/themes/default/icons/16x16/add.gif)
+    center no-repeat;
+}
+
+#resultGrid{
+    float:left !important;
+    width:50% !important;
+    height:100% !important;
+}
+
+#resultGrid .x-panel-body{
+    width:100% !important;
+    height:100% !important;
+
+}
+
+#cq-paragraphreference-tree{
+    float:left !important;
+    width:50% !important;
+    height:100% !important;
+}
+
+#cq-paragraphreference-tree .x-panel-body {
+    height:100% !important;
+
+}
+
+#resultGrid .x-grid3{
+    width:100% !important;
+    height:100% !important;
+
+}
+
+#resultGrid .x-grid3-scroller{
+    width:100% !important;
+    height:88% !important;
+
+}

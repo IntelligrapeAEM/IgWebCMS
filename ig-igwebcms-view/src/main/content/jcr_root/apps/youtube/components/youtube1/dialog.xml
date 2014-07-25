@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Youtube Settings"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic
+                    jcr:primaryType="nt:unstructured"
+                    title="Basic"
+                    xtype="panel">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <loginUrl
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Channel ID"
+                            name="./loginUrl"
+                            xtype="textfield"/>
+                        <loginspacer
+                            jcr:primaryType="cq:Widget"
+                            height="{Long}20"
+                            xtype="spacer"/>
+                        <customerkey
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Google Key"
+                            name="./customerkey"
+                            xtype="textfield"/>
+                        <spacer2
+                            jcr:primaryType="cq:Widget"
+                            height="{Long}20"
+                            xtype="spacer"/>
+                        <spacer
+                            jcr:primaryType="cq:Widget"
+                            height="{Long}20"
+                            xtype="spacer"/>
+                        <btnpanel
+                            jcr:primaryType="cq:Widget"
+                            border="{Boolean}false"
+                            xtype="panel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <connectbutton
+                                    jcr:primaryType="cq:Widget"
+                                    localName="connectButton"
+                                    style="float:right;"
+                                    text="Connect to Youtube"
+                                    xtype="button">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        click="function(comp, evt) {var dialog = this.findParentByType('dialog'); CQ.salesforce.restAPI1.connect(dialog); }"/>
+                                </connectbutton>
+                            </items>
+                        </btnpanel>
+                    </items>
+                </basic>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>

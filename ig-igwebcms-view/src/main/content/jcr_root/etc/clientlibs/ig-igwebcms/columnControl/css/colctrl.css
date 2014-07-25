@@ -1,0 +1,78 @@
+div.cq-colctrl-cols {width: 100%; float: left; }
+
+div.cq-colctrl-default { width: 100%;}
+
+/* layout 0 : 50% 50% ( grid6 + grid6 ) */
+div.cq-colctrl-lt0 { }
+div.cq-colctrl-lt0-c0 { width: 48%; margin-right:2%; float: left}
+div.cq-colctrl-lt0-c1 { width: 48%; margin-left: 2%; float: left}
+
+/* layout 1 : 33% 33% 33%( grid4 + grid4 + grid4 ) */
+div.cq-colctrl-lt1 { }
+div.cq-colctrl-lt1-c0 { width: 30.5%; margin-right: 2%;; float: left}
+div.cq-colctrl-lt1-c1 { width: 30.5%; margin-left: 2%; margin-right: 2%;; float: left}
+div.cq-colctrl-lt1-c2 { width: 31%; margin-left: 2%;; float: left }
+
+/* layout 2: 16% 16% 16% 33% ( grid2.6 + grid2.6 + grid2.6 + grid4 ) */
+div.cq-colctrl-lt2 { }
+div.cq-colctrl-lt2-c0 { width: 140px; margin-right: 2%;; float: left}
+div.cq-colctrl-lt2-c1 { width: 140px; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt2-c2 { width: 140px; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt2-c3 { width: 220px; margin-left: 2% ; float: left}
+
+/* layout 3: 4 x 25% ( grid3 + grid3 + grid3 + grid3 ) */
+div.cq-colctrl-lt3 { }
+div.cq-colctrl-lt3-c0 { width: 22%; margin-right: 2%; float: left}
+div.cq-colctrl-lt3-c1 { width: 22%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt3-c2 { width: 22%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt3-c3 { width: 22%; margin-left: 2%; float: left}
+
+/* layout 4: 5 x 20% ( grid2.5 + grid2.5 + grid2.5 + grid2.5 + grid2.5 ) */
+div.cq-colctrl-lt4 { }
+div.cq-colctrl-lt4-c0 { width: 16.8%; margin-right: 2%; float: left}
+div.cq-colctrl-lt4-c1 { width: 16.8%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt4-c2 { width: 16.8%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt4-c3 { width: 16.8%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt4-c4 { width: 16.8%; margin-left: 2%; float: left }
+
+/* layout 4: 5 x 20% ( grid2.5 + grid2.5 + grid2.5 + grid2.5 + grid2.5 ) */
+div.cq-colctrl-lt5 { }
+div.cq-colctrl-lt5-c0 { width: 13.33%; margin-right: 2%; float: left}
+div.cq-colctrl-lt5-c1 { width: 13.33%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt5-c2 { width: 13.33%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt5-c3 { width: 13.33%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt5-c4 { width: 13.33%; margin-left: 2%; margin-right: 2%; float: left}
+div.cq-colctrl-lt5-c5 { width: 13.33%; margin-left: 2%; float: left;}
+
+@media (max-width:768px){
+    div.cq-colctrl-lt5-c0,
+    div.cq-colctrl-lt5-c1,
+    div.cq-colctrl-lt5-c2,
+    div.cq-colctrl-lt5-c3,
+    div.cq-colctrl-lt5-c4,
+    div.cq-colctrl-lt5-c5{margin:0;width:33%}
+
+	div.cq-colctrl-lt4-c0,
+    div.cq-colctrl-lt4-c1,
+    div.cq-colctrl-lt4-c2{margin:0;width:33%}
+    div.cq-colctrl-lt4-c3,
+    div.cq-colctrl-lt4-c4{margin:0;width:50%}
+
+	div.cq-colctrl-lt3-c0,
+    div.cq-colctrl-lt3-c1,
+    div.cq-colctrl-lt3-c2,
+    div.cq-colctrl-lt3-c3{margin:0;width:50%}
+
+ /*	.cq-colctrl-lt5-c0 div:nth-child(2),
+	.cq-colctrl-lt5-c1 div:nth-child(2),
+	.cq-colctrl-lt5-c2 div:nth-child(2),
+    .cq-colctrl-lt5-c3 div:nth-child(2),
+    .cq-colctrl-lt5-c4 div:nth-child(2),
+    .cq-colctrl-lt5-c5 div:nth-child(2){
+    	display: none;
+	}
+*/
+
+
+}
+

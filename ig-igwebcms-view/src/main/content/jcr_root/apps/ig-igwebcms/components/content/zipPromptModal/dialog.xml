@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          xtype="dialog">
+    <items
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                    jcr:primaryType="cq:Panel"
+                    title="Config">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <width
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Modal Width (em)"
+                            fieldDescription="Defaults to 60em."
+                            name="./width"
+                            xtype="numberfield"/>
+                    <locButton
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            defaultValue="GO"
+                            description="Text displayed on button to submit location"
+                            fieldLabel="Button Label for location searches"
+                            name="./locButton"
+                            xtype="textfield"/>
+                    <locPlaceholder
+                            jcr:primaryType="cq:Widget"
+                            allowBlank="{Boolean}false"
+                            defaultValue="Enter Your Zip Code"
+                            description="Text displayed in change location text box"
+                            fieldLabel="Location placeholder text"
+                            name="./locPlaceholder"
+                            xtype="textfield"/>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
