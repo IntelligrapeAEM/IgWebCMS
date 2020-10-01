@@ -1,4 +1,4 @@
-IgWebCMS
+IgWebCMS an amazing project
 ========
 
-My first git hub project
+My first git hub project.
